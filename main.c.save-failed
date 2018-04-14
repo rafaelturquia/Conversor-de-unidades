@@ -2,21 +2,34 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main()
-{
-    int numDecimal = 0, quociente = 0, resto = 0, baseOctal = 8;
-    int i = 1, vetRestos[i];
+int main() {
+    int numDecimal=0, quociente=0, resto=0, baseOctal=8, tamJ = 0;
+    int i=0, j=0, vetRestos[i];
+    int vetInvertido[tamJ];
     printf("Digite o numero decimal: ");
     scanf("%d", &numDecimal);
-    while (numDecimal != 0)
-    {
+
+    while (numDecimal > 0) {
+        i++;
         resto = fmod(numDecimal, baseOctal);
-        printf("%d\n", resto);
         vetRestos[i] = resto;
         numDecimal /= baseOctal;
         numDecimal = trunc(numDecimal);
-        i++;
+        printf("%d\n", resto);
     }
-    printf("%d", vetRestos);
+
+    tamJ = i;
+    printf("tamanho do tamJ %d\n\n", tamJ);
+
+    //INVERTENDO O VETOR
+    for (i; i!=0; i--, j++) {
+        vetInvertido[j] = vetRestos[i];
+    }
+
+    printf("Vetor invertido: ");
+    for (j=0; j < tamJ ; j++) {
+        printf("\nposicao %d: ", j);
+        printf("%d", vetInvertido[j]);
+    }
     return 0;
 }

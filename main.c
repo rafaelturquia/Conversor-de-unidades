@@ -3,11 +3,12 @@
 #include <math.h>
 
 int main() {
-    int numDecimal=0, quociente=0, resto=0, baseOctal=8, tamJ = 0;
-    int i=0, j=0, vetRestos[i];
-    int vetInvertido[tamJ];
+    long int numDecimal=0, quociente=0, resto=0, baseOctal=8, tamJ = 0;
+    long int i=0, j=0, vetRestos[15];
+    long int vetConvertido[15];
     printf("Digite o numero decimal: ");
     scanf("%d", &numDecimal);
+
     while (numDecimal > 0) {
         i++;
         resto = fmod(numDecimal, baseOctal);
@@ -16,19 +17,25 @@ int main() {
         numDecimal = trunc(numDecimal);
         printf("%d\n", resto);
     }
-    tamJ = i;
-    printf("tamanho do vetor i %d\n\n", tamJ);
 
-    while (i>0) {
-        vetRestos[i] = vetInvertido[j];
-        printf("\n\nvij %d\n\n", vetInvertido[j]);
-        i--;
-        j++;
+    tamJ = i;
+    printf("tamanho do tamJ %d\n\n", tamJ);
+
+    //INVERTENDO O VETOR
+    for (i; i>0; i--, j++) {
+        vetConvertido[j] = vetRestos[i];
     }
-    printf("tamanho j %d", j);
-    printf("Vetor invertido: ");
-    for (j=1;j < tamJ; j++) {
-        printf("%d", vetInvertido[j]);
+
+    printf("Octal: ");
+    for (j=0; j < tamJ ; j++) {
+        printf("%d", vetConvertido[j]);
     }
+
+//ALGORITMO PARA TRABALHAR SOMENTE COM A PARTE FRACIONARIA
+float whole = 20.512;
+float fracionario = whole - ((long)whole);
+printf("%.3f\n\n", fracionario);
+
     return 0;
+
 }
