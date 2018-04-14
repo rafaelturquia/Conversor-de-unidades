@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1523647995 source:c:\google drive\1.engenharia de software\012018\algoritmos e estruturas de dados i - 7146.1.00\trabalho 1\conversor-de-unidades\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1523668396 source:z:\google drive\1.engenharia de software\012018\algoritmos e estruturas de dados i - 7146.1.00\trabalho 1\conversor-de-unidades\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
